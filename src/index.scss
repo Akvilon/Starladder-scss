@@ -1,0 +1,13 @@
+
+@import 'styles/reset.scss';
+@import 'styles/variables.scss';
+@import 'styles/lib.scss';
+
+
+#root {
+    height: 100%;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    min-width: 320px;
+}

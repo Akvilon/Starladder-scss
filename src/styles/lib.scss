@@ -1,0 +1,322 @@
+@import 'variables.scss';
+
+
+.app-h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 6.25rem;
+    line-height: 115%;
+    color: $white;
+
+    @media screen and (max-width: 768px) {
+        font-size: 3rem;
+        line-height: 3.75rem;
+    }
+}
+
+.app-h5 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2.188rem;
+    color: $black;
+
+    @media screen and (max-width: 768px) {
+        line-height: 2rem;
+    }
+}
+
+.app-button {
+    height: 60px;
+    width: 175px;
+    background: transparent;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: $darkGrey;
+    transition: .3s;
+    border: none;
+    letter-spacing: 0.094rem;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+        width: 115px;
+        height: 50px;
+        font-size: 0.750rem;
+    }
+}
+
+.app-button--active {
+    color: $white;
+    background: $red;
+    transition: .3s;
+}
+
+.app-caption {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.01rem;
+    color: $darkGrey;
+
+    @media screen and (max-width: 768px) {
+        font-size: 0.750rem;
+    }
+}
+
+.app-caption-accent {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
+    color: $white;
+
+    @media screen and (max-width: 768px) {
+        font-size: 0.750rem;
+    }
+}
+
+.app-card {
+    flex: 0 1 calc(25% - 2.188rem);
+    min-width: 336px;
+    height: 360px;
+    background: $white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(143, 154, 157, 0.2);
+    border-radius: 2px;
+    margin-bottom: 2.188rem;
+    transition: 0.3s;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+        height: 225px;
+        min-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .app-card__top {
+        height: 164px;
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 25px 0px 25px;
+
+        @media screen and (max-width: 768px) {
+            height: auto;
+            padding: 13px 15px 0px 13px;
+        }
+
+        .app-card__top__link {
+
+            & a {
+                display: block;
+                text-align: right;
+
+                & img {
+                    padding-right: 4px;
+
+                    @media screen and (max-width: 768px) {
+                        height: 25px;
+                        padding-right: 6px;
+                    }
+                }
+
+                & p {
+                    padding-top: 5px;
+                    text-transform: uppercase;
+                    color: $white;
+
+                    @media screen and (max-width: 768px) {
+                        text-align: center;
+                        line-height: 0.938rem;
+                        padding: 0;
+                        padding-top: 3px;
+                        width: 60%;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+
+        .app-card__top__date-time {
+            text-align: right;
+
+            & p {
+                padding-top: 0;
+            }
+        }
+    }
+
+    .app-card__content {
+        padding: 0px 25px 25px 25px;
+
+        @media screen and (max-width: 768px) {
+            padding: 0px 15px 15px 15px;
+            position: relative;
+        }
+
+        .app-card__content__icons {
+            display: flex;          
+
+            & img {
+                margin-right: 15px;
+            }
+        }
+
+        .app-card__content__battleIcon {
+            padding-top: 18px;
+        }
+
+        .app-card__content__players {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+
+            @media screen and (max-width: 768px) {
+                margin-top: 10px;
+            }
+
+            .app-card__content__players__names {
+                & h5:last-child {
+                    padding-top: 5px;
+                    @media screen and (max-width: 768px) {
+                        padding-top: 0px;
+                    }
+                }
+            }
+
+            .app-card__content__players__bets {
+                & div {
+                    background: $lightGrey;
+                    border: 1px solid rgba(151, 151, 151, 0.1);
+                    padding: 0px 10px;
+                    margin-top: 4px;
+
+                    @media screen and (max-width: 768px) {
+                        margin-top: 2px;
+                    }
+
+                    & p {
+                        color: $black;
+                        text-align: center;
+                        letter-spacing: 0.02rem;
+                        padding-top: 2px;
+                    }
+                }
+
+                & div:last-child {
+                    margin-top: 10px;
+                }
+            }
+
+            .app-card__content__players__matchNum {
+                height: 40px;
+                width: 105px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #F0F0F0;
+                border-radius: 4px;
+
+                & p {
+                    color: $darkGrey;
+                }
+            }
+
+            .app-card__content__players__score {
+
+                & h5:last-child {
+                    padding-top: 5px;
+                    @media screen and (max-width: 768px) {
+                        padding-top: 0px;
+                    }
+                }
+            }
+        }
+
+        .app-card__body__footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+
+            .app-card__body__footer__info {
+                display: flex;
+
+                & img {
+                    margin-right: 10px;
+                }
+            }
+
+            .app-card__body__footer__logo {
+                padding-top: 1px;
+            }
+        }
+    }
+}
+
+.app-card:hover {
+    border: 1px solid $red;
+    transition: 0.3s;
+}
+
+.app-card_online {
+    @media screen and (max-width: 768px) {
+        height: 233px;
+        background: url('../assets/card_logo_online.svg') no-repeat;
+        background-position: 108% -21%;
+    }
+
+    .app-card__top {
+        background: url('../assets/card_logo_online.svg') no-repeat;
+        background-position: top right;
+
+        @media screen and (max-width: 768px) {
+            background: none;
+        }
+    }
+}
+
+.app-card_upcoming {
+    @media screen and (max-width: 768px) {
+        background: url('../assets/card_logo_upcoming.svg') no-repeat;
+        background-position: 108% -21%;
+    }
+
+    .app-card__top {
+        background: url('../assets/card_logo_upcoming.svg') no-repeat;
+        background-position: top right;
+
+        @media screen and (max-width: 768px) {
+            background: none;
+        }
+    }
+
+    .app-card__body__footer__info {
+        display: flex;
+    }
+}
+
+.app-card_passed {
+    @media screen and (max-width: 768px) {
+        background: url('../assets/card_logo_passed.svg') no-repeat;
+        background-position: 108% -21%;
+    }
+
+    .app-card__top {
+        background: url('../assets/card_logo_passed.svg') no-repeat;
+        background-position: top right;
+
+        @media screen and (max-width: 768px) {
+            background: none;
+        }
+    }
+
+    .app-card_passed_defeated {
+        color: $darkGrey;
+    }
+}

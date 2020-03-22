@@ -1,0 +1,72 @@
+@import '../../styles/variables.scss';
+
+
+
+.header {
+    height: 375px;
+    width: 100%;
+    background: url('../../assets/header_bg.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+        height: 240px;
+        background: url('../../assets/header_mob_bg.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .logo {
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .header__inner {
+        height: 100%;
+        max-width: 1460px;
+        padding: 0px 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 1440px) {
+            max-width: 752px;
+        }
+
+        @media screen and (max-width: 768px) {
+            max-width: 414px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .header__title {
+            padding-top: 126px;
+            z-index: 1;
+            position: relative;
+
+            @media screen and (max-width: 768px) {
+                padding: 88px 20px 0px 20px;
+            }
+        }
+
+        .header__tabs {
+            display: flex;
+            z-index: 1;
+            position: relative;
+            margin-top: auto;
+            border-bottom: 2px solid $red;
+
+            @media screen and (max-width: 768px) {
+                padding: 0px 20px;
+            }
+        }
+    }
+
+}
