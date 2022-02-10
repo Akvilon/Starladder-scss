@@ -9,7 +9,7 @@
     "@types/jest": "^24.9.1",
     "@types/node": "^12.12.29",
     "@types/react": "^16.9.23",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",
